@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "55bd4bd4-8939-47bb-af27-db68c96d61fc",
+		"name": "P3 Parcial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "D",
+			"item": [
+				{
+					"name": "Punto 1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "admin",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/Nexo.php/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"Nexo.php",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@mail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}login",
+							"host": [
+								"{{url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 3",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyIjoiYWRtaW5AbWFpbC5jb20iLCJ0eXBlIjoiYWRtaW4ifQ.I3ZEhbFA8JAeyvnCyIwVTHwdM5r_HMlTrheAH5oqxXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "marca",
+									"value": "Audi",
+									"type": "text"
+								},
+								{
+									"key": "modelo",
+									"value": "2019",
+									"type": "text"
+								},
+								{
+									"key": "patente",
+									"value": "abc 123",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "50000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/Nexo.php/vehiculo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"Nexo.php",
+								"vehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyIjoiYWRtaW5AbWFpbC5jb20iLCJ0eXBlIjoiYWRtaW4ifQ.I3ZEhbFA8JAeyvnCyIwVTHwdM5r_HMlTrheAH5oqxXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "patente",
+									"value": "aaa123",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "hora",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/index.php/patente/aaa123",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"index.php",
+								"patente",
+								"aaa123"
+							],
+							"query": [
+								{
+									"key": "marca",
+									"value": "audi",
+									"disabled": true
+								},
+								{
+									"key": "modelo",
+									"value": "2018",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/index.php/servicio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"index.php",
+								"servicio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyIjoiYWRtaW5AbWFpbC5jb20iLCJ0eXBlIjoiYWRtaW4ifQ.I3ZEhbFA8JAeyvnCyIwVTHwdM5r_HMlTrheAH5oqxXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/index.php/turno?patente=nnn123&fecha=19&tipoServicio=20000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"index.php",
+								"turno"
+							],
+							"query": [
+								{
+									"key": "patente",
+									"value": "nnn123"
+								},
+								{
+									"key": "fecha",
+									"value": "19"
+								},
+								{
+									"key": "tipoServicio",
+									"value": "20000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Punto 7",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJVc2VyIjoiYWRtaW5AbWFpbC5jb20iLCJ0eXBlIjoiYWRtaW4ifQ.I3ZEhbFA8JAeyvnCyIwVTHwdM5r_HMlTrheAH5oqxXU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "servicio",
+									"value": "20000\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/Parcial/index.php/stats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"Parcial",
+								"index.php",
+								"stats"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
